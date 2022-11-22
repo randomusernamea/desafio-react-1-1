@@ -1,12 +1,16 @@
 import './App.css';
-import Main from './Desafio/main/Main'
+import FooterComp from './Componentes/FooterComp.jsx'
+import MainComp from './Componentes/MainComp.jsx'
+import HeadComp from './Componentes/HeadComp.jsx'
+
 
 function App() {
   return (
     <div className="App">
-      <Main />
-
-     
+     <HeadComp/>
+     <MainComp/>
+     <FooterComp/>
+      {/* hola */}
     </div>
   );
 }
