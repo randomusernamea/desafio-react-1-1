@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import deportistas from './deportistas'
 import './main.css'
 
-function Main() {
+function MainComp() {
   const[modalcontent, setModalContent] = useState ([])
   const[modaltoggle, setModalToggle] = useState (false)
 
@@ -67,7 +67,7 @@ function Main() {
   )
 }
 
-export default Main
+export default MainComp
 
 
 
