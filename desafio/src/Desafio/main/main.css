@@ -1,0 +1,59 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+} 
+
+.mainContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+
+}
+
+.contentContainer {
+    width: 80%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    justify-content: center;
+    align-content: center;
+    
+    
+    
+}
+
+.content_card {
+    
+    border: 4px solid black;
+    width: 100%;
+    height: 40vh;
+}
+
+.popUpContainer {
+    
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popUpBody {
+    width: 50%;
+    height: 40%;
+    background-color: rgb(254, 254, 112);
+    margin: auto;
+}
+
+.imagenDeportistas {
+       background-image: url(../../../public/images/1.jpg);
+       width: 150px;
+       height: 150px;
+       background-size: cover;
+       background-repeat: no-repeat;
+}
