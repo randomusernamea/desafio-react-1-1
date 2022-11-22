@@ -8,13 +8,10 @@ import HeadComp from './Componentes/HeadComp.jsx'
 function App() {
   return (
     <div className="App">
-<<<<<<< HEAD
      <HeadComp/>
      <MainComp/>
      <FooterComp/>
-=======
       {/* hola */}
->>>>>>> f974361e6b1435c6b9edf8ff14e113a564a122b9
     </div>
   );
 }
