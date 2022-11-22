@@ -1,7 +1,7 @@
 import './App.css';
-import FooterComp from './Componentes/FooterComp.jsx'
-import MainComp from './Componentes/MainComp.jsx'
-import HeadComp from './Componentes/HeadComp.jsx'
+// import FooterComp from './Componentes/FooterComp.jsx'
+import MainComp from './Desafio/main/Main';
+import HeadComp from './Desafio/header/HeadComp';
 
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
     <div className="App">
      <HeadComp/>
      <MainComp/>
-     <FooterComp/>
+     {/* <FooterComp/> */}
       {/* hola */}
     </div>
   );
