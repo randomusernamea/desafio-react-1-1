@@ -21,14 +21,16 @@
     gap: 10px;
     justify-content: center;
     align-content: center;
+    background-color: rgb(235, 235, 137,);
     
     
     
 }
 
 .content_card {
-    
-    border: 4px solid black;
+    background-color: rgb(228, 211, 244);
+    border: 2px solid rgb(170, 116, 221);
+    border-radius: 5px;
     width: 100%;
     height: 40vh;
 }
@@ -50,10 +52,25 @@
     margin: auto;
 }
 
-.imagenDeportistas {
-       background-image: url(../../../public/images/1.jpg);
-       width: 150px;
-       height: 150px;
-       background-size: cover;
-       background-repeat: no-repeat;
+.contenedorButton {
+    height: 15%;
+    width: 90%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
 }
+
+.nameImgEspecialidad {
+    height: 80%;
+    width: 100%;
+}
+
+.buttonVerMas {
+    border: solid rgb(119, 119, 26);
+    background-color: rgb(242, 242, 146);
+    width: 120px;
+    height: 90px;
+    border-radius: 20px;
+}
+

@@ -2,7 +2,7 @@
  
  let deportistas = [
     { 
-      imgFile: "1.jpg",
+      imgFile: "../../../public/images/1.jpg",
       nombre: "Pablo Heredia",
       especialidad: "Culturismo",
       edad: "31",

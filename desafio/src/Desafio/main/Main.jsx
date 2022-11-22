@@ -20,10 +20,14 @@ function Main() {
         {deportistas.map((deportista) => {
                 return(
                     <div className="content_card">
-                        <img src={`./images${deportista.imgFile}`} alt="" />
+                        <div className='nameImgEspecialidad'>
                         <h1>{deportista.nombre}</h1>
-                        <p>{deportista.especialidad}</p>
-                        <button onClick={()=> changeContent(deportista) }>VER MAS</button>
+                        <img src={`./images${deportista.imgFile}`} alt="imagen" />
+                        <h1>{deportista.especialidad}</h1>
+                        </div>
+                        <div className='contenedorButton'>
+                        <button className='buttonVerMas' onClick={()=> changeContent(deportista) }>VER MAS</button>
+                        </div>
                     </div>
                 );
             })
