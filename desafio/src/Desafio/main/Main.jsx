@@ -6,7 +6,10 @@ import './main.css'
 function MainComp() {
   const[modalcontent, setModalContent] = useState ([])
   const[modaltoggle, setModalToggle] = useState (false)
+  
+    const changeToggle(){
 
+    }
   
   const changeContent = (deportista) => {
      setModalContent([deportista]); 
@@ -19,7 +22,7 @@ function MainComp() {
        <div className='contentContainer'>
         {deportistas.map((deportista) => {
                 return(
-                    <div className="content_card">
+                    <div className="content_card visible">
                         <div className='nameImgEspecialidad'>
                         <h1>{deportista.nombre}</h1>
                         <img className='imgDeportistas' src={deportista.image} alt="imagen" />
