@@ -1,0 +1,53 @@
+.footer {
+    background-color: rgb(26, 26, 65);
+    width: 100%;
+    height: 20%;
+    color: rgb(177, 177, 250);
+    font-size: 20px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 'imagen imagen imagen'
+        'links derechos redes';
+}
+
+a {
+    text-decoration: none;
+    color: rgb(127, 255, 187);
+}
+
+.imagen-footer {
+    grid-area: imagen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagen-senpai {
+    width: 200px;
+    height: 200px;
+    background-image: url(./imagenes/senpaiLogo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.links-footer {
+    display: flex;
+    flex-direction: column;
+    grid-area: links;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10%;
+}
+
+.derechos {
+    grid-area: derechos;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.redes-footer {
+    grid-area: redes;
+}
