@@ -18,7 +18,9 @@ function Footer() {
           <p>©2022 Senpai Academy. Todos los derechos reservados</p>
         </div>
         <div className='redes-footer'>
-
+          <img src="/imagenes/icon-facebook.svg" alt="" className='icono-redes' />
+          <img src="/imagenes/icon-instagram.svg" alt="" className='icono-redes' />
+          <img src="/imagenes/icon-twitter.svg" alt="" className='icono-redes' />
         </div>
 
       </div>
