@@ -52,6 +52,10 @@
     margin: auto;
 }
 
+.popUpCard {
+    display: flex;
+}
+
 .contenedorButton {
     height: 15%;
     width: 90%;
@@ -81,7 +85,7 @@
 
 .presentacion {
     width: 50%;
-    height: 50%;
+    height: 100%;
 }
 
 .descripcion {
@@ -90,15 +94,20 @@
 }
 
 .estadisticas {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    
     font-size: 1rem;
     width: 50%;
     height: 100%;
 }
 
-.visible{
-    display: block;
+.show {
+   display: block;
 }
-
-.hidden{
+.hidden {
     display: none;
+
 }

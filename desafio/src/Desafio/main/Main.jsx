@@ -6,7 +6,34 @@ import './main.css'
 function MainComp() {
   const[modalcontent, setModalContent] = useState ([])
   const[modaltoggle, setModalToggle] = useState (false)
-  
+  const[personas, setPersonas] = useState(deportistas)
+  const[search, setSearch] = useState ('')
+  const[button, setButton] = useState ('')
+
+
+
+
+
+  const onChangeSearch = (e) => {
+    setSearch(e.target.value);
+  }
+
+
+
+
+
+
+
+  const onChangeCard = () => {
+    
+    const resultado = deportistas.filter((deportista)=>{
+        return deportista.nombre.toLowerCase().includes(search.toLowerCase())
+        })
+    
+    setPersonas(resultado);
+
+
+    }   
 
   const changeContent = (deportista) => {
      setModalContent([deportista]); 
@@ -15,9 +42,16 @@ function MainComp() {
 
 
   return (
+
+
+
+    
     <div className='mainContainer'> 
+         <label htmlFor="search"></label>
+        <input value = {search} onChange={onChangeSearch} type="text" />
+        <button   onClick={onChangeCard}>BUSCAR</button>
        <div className='contentContainer'>
-        {deportistas.map((deportista) => {
+        {personas.map((deportista) => {
                 return(
                     <div className="content_card visible">
                         <div className='nameImgEspecialidad'>
@@ -40,6 +74,7 @@ function MainComp() {
             </div>
             <div className="popUpContent">
                 {modalcontent.map((modal)=>{
+                    
                     return(
                         <card className="popUpCard">
                          <div className='presentacion'>   
@@ -49,19 +84,21 @@ function MainComp() {
                         <p>Peso: {modal.peso}</p>
                         <p>Nacionalidad: {modal.nacionalidad}</p>
                         <p>Record personal: {modal.record}</p>
-                        </div>
-                        <div className='descripcion'>
-                            <h5> Descripción  </h5>
+                        <h5> Descripción  </h5>
                             <p>{modal.descripcion}</p>
-                        </div> 
+                        </div>
+                        {/* <div className='descripcion'> */}
+                            {/* <h5> Descripción  </h5>
+                            <p>{modal.descripcion}</p> */}
+                        {/* </div>  */}
                         <div className='estadisticas'>
-                            <p>Energia: {modal.estadisticas.energia}</p>
+                            <p>Energia: {modal.estadisticas.energia}</p> <br />
 
-                            <p>Fuerza: {modal.estadisticas.fuerza}</p>
-                            <p>Resistencia: {modal.estadisticas.resistencia}</p>
-                            <p>Agilidad: {modal.estadisticas.agilidad}</p>
-                            <p>Aguante: {modal.estadisticas.aguante}</p>
-                            <p>Dedicacion: {modal.estadisticas.dedicacion}</p>
+                            <p>Fuerza: {modal.estadisticas.fuerza}</p> <br />
+                            <p>Resistencia: {modal.estadisticas.resistencia}</p><br />
+                            <p>Agilidad: {modal.estadisticas.agilidad}</p><br />
+                            <p>Aguante: {modal.estadisticas.aguante}</p><br />
+                            <p>Dedicacion: {modal.estadisticas.dedicacion}</p><br />
                             <p>Profesionalismo: {modal.estadisticas.profesionalismo}</p> 
                         </div>
                         </card>
