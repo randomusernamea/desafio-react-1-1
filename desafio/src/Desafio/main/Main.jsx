@@ -22,7 +22,7 @@ function MainComp() {
                     <div className="content_card">
                         <div className='nameImgEspecialidad'>
                         <h1>{deportista.nombre}</h1>
-                        <img src={`./images${deportista.imgFile}`} alt="imagen" />
+                        <img className='imgDeportistas' src={deportista.image} alt="imagen" />
                         <h1>{deportista.especialidad}</h1>
                         </div>
                         <div className='contenedorButton'>
@@ -41,7 +41,8 @@ function MainComp() {
             <div className="popUpContent">
                 {modalcontent.map((modal)=>{
                     return(
-                        <div className="popUpCard">
+                        <card className="popUpCard">
+                         <div className='presentacion'>   
                         <p>{modal.nombre}</p>
                         <p>Edad: {modal.edad}</p>
                         <p>Altura: {modal.altura}</p>
@@ -49,6 +50,21 @@ function MainComp() {
                         <p>Nacionalidad: {modal.nacionalidad}</p>
                         <p>Record personal: {modal.record}</p>
                         </div>
+                        <div className='descripcion'>
+                            <h5> Descripción  </h5>
+                            <p>{modal.descripcion}</p>
+                        </div> 
+                        <div className='estadisticas'>
+                            <p>{modal.estadisticas[0]}</p>
+                            {/* <p>{modal.energia}</p>
+                            <p>{modal.fuerza}</p>
+                            <p>{modal.resistencia}</p>
+                            <p>{modal.agilidad}</p>
+                            <p>{modal.aguante}</p>
+                            <p>{modal. dedicacion}</p>
+                            <p>{modal.profesionalismo}</p> */}
+                        </div>
+                        </card>
                     )
                 })}
             </div>

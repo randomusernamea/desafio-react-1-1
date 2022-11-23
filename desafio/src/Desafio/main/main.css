@@ -74,3 +74,24 @@
     border-radius: 20px;
 }
 
+.imgDeportistas {
+    width: 50% ;
+    height: 70%;
+}
+
+.presentacion {
+    width: 50%;
+    height: 50%;
+}
+
+.descripcion {
+    width: 50%;
+    height: 50%;
+}
+
+.estadisticas {
+    font-size: 1rem;
+    width: 50%;
+    height: 100%;
+}
+

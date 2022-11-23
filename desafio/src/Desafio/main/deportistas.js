@@ -2,7 +2,7 @@
  
  let deportistas = [
     { 
-      imgFile: "../../../public/images/1.jpg",
+      image: "/images/1.jpg",
       nombre: "Pablo Heredia",
       especialidad: "Culturismo",
       edad: "31",
@@ -23,7 +23,7 @@
       },
     },
     {
-      image: "2.png",
+      image: "/images/2.png",
       nombre: "Luis M. Suarez",
       especialidad: "Fútbol",
       edad: "38",
@@ -44,7 +44,7 @@
       },
     },
     {
-      image: "3.png",
+      image: "/images/3.png",
       nombre: "Soy Dalto",
       especialidad: "Programador",
       edad: "25",
@@ -65,7 +65,7 @@
       },
     },
     {
-      image: "4.png",
+      image: "/images/4.png",
       nombre: "Tigresa Acuña",
       especialidad: "Boxo",
       edad: "35",
@@ -86,7 +86,7 @@
       },
     },
     {
-      image: "5.png",
+      image: "/images/5.png",
       nombre: "Andres Vilaseca",
       especialidad: "Rugby",
       edad: "28",
@@ -107,7 +107,7 @@
       },
     },
     { 
-      image: "6.png",
+      image: "/images/6.png",
       nombre: "Manuela Vilar",
       especialidad: "Hockey",
       edad: "29",
