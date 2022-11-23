@@ -16,6 +16,7 @@ function MainComp() {
     setSearch(e.target.value);
   }
 
+ 
 
 
 
@@ -23,7 +24,7 @@ function MainComp() {
 
 
   const onChangeCard = () => {
-    let texto = {search};
+    let resultado = deportistas.filter.;
 
 
 
@@ -46,7 +47,11 @@ function MainComp() {
 // }
 
 
-  
+//  let  = deportistas.filter.includes((value) => {
+//     value
+//   })
+
+  search = resultado
 
   
   const changeContent = (deportista) => {
@@ -57,15 +62,16 @@ function MainComp() {
 
   return (
 
-    
-    <div className='mainContainer'> 
-         <label htmlFor="search"></label>
+    <>
+     <label htmlFor="search"></label>
         <input value = {search} onChange={onChangeSearch} type="text" />
         <button   onClick={onChangeCard}>BUSCAR</button>
+    <div className='mainContainer'> 
+         
        <div className='contentContainer'>
         {deportistas.map((deportista) => {
                 return(
-                    <div className="content_card visible">
+                    <div className="content_card visible"> 
                         <div className='nameImgEspecialidad'>
                         <h1>{deportista.nombre}</h1>
                         <img className='imgDeportistas' src={deportista.image} alt="imagen" />
@@ -87,8 +93,8 @@ function MainComp() {
             <div className="popUpContent">
                 {modalcontent.map((modal)=>{
                     return(
-                        <card className="popUpCard">
-                         <div className='presentacion'>   
+                        <card className="popUpCard"> 
+                         <div className='presentacion'>
                         <p>{modal.nombre}</p>
                         <p>Edad: {modal.edad}</p>
                         <p>Altura: {modal.altura}</p>
@@ -127,6 +133,7 @@ function MainComp() {
 
 
     </div>
+    </>
     
   )
 }
