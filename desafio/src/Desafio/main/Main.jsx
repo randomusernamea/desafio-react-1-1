@@ -55,14 +55,14 @@ function MainComp() {
                             <p>{modal.descripcion}</p>
                         </div> 
                         <div className='estadisticas'>
-                            <p>{modal.estadisticas[0]}</p>
-                            {/* <p>{modal.energia}</p>
-                            <p>{modal.fuerza}</p>
-                            <p>{modal.resistencia}</p>
-                            <p>{modal.agilidad}</p>
-                            <p>{modal.aguante}</p>
-                            <p>{modal. dedicacion}</p>
-                            <p>{modal.profesionalismo}</p> */}
+                            <p>Energia: {modal.estadisticas.energia}</p>
+
+                            <p>Fuerza: {modal.estadisticas.fuerza}</p>
+                            <p>Resistencia: {modal.estadisticas.resistencia}</p>
+                            <p>Agilidad: {modal.estadisticas.agilidad}</p>
+                            <p>Aguante: {modal.estadisticas.aguante}</p>
+                            <p>Dedicacion: {modal.estadistica.dedicacion}</p>
+                            <p>Profesionalismo: {modal.estadisticas.profesionalismo}</p> */
                         </div>
                         </card>
                     )
