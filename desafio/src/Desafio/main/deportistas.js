@@ -2,7 +2,6 @@
  
  let deportistas = [
     { 
-      class:1,
       image: "/images/1.jpg",
       nombre: "Pablo Heredia",
       especialidad: "Culturismo",
@@ -24,7 +23,6 @@
       },
     },
     {
-      class: 2,
       image: "/images/2.png",
       nombre: "Luis M. Suarez",
       especialidad: "Fútbol",
@@ -36,17 +34,16 @@
       descripcion:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       estadisticas: {
-        energia: 999,
-        fuerza: 999,
-        resistencia: 999,
-        agilidad: 999,
-        aguante: 999,
-        dedicacion: 999,
-        profesionalismo: 999,
+        energia: 80,
+        fuerza: 100,
+        resistencia: 100,
+        agilidad: 10,
+        aguante: 100,
+        dedicacion: 50,
+        profesionalismo: 40,
       },
     },
-    { 
-      class: 3,
+    {
       image: "/images/3.png",
       nombre: "Soy Dalto",
       especialidad: "Programador",
@@ -68,7 +65,6 @@
       },
     },
     {
-      class: 4,
       image: "/images/4.png",
       nombre: "Tigresa Acuña",
       especialidad: "Boxo",
@@ -90,7 +86,6 @@
       },
     },
     {
-      class: 5,
       image: "/images/5.png",
       nombre: "Andres Vilaseca",
       especialidad: "Rugby",
@@ -112,7 +107,6 @@
       },
     },
     { 
-      class: 6,
       image: "/images/6.png",
       nombre: "Manuela Vilar",
       especialidad: "Hockey",
