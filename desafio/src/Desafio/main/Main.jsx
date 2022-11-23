@@ -61,8 +61,8 @@ function MainComp() {
                             <p>Resistencia: {modal.estadisticas.resistencia}</p>
                             <p>Agilidad: {modal.estadisticas.agilidad}</p>
                             <p>Aguante: {modal.estadisticas.aguante}</p>
-                            <p>Dedicacion: {modal.estadistica.dedicacion}</p>
-                            <p>Profesionalismo: {modal.estadisticas.profesionalismo}</p> */
+                            <p>Dedicacion: {modal.estadisticas.dedicacion}</p>
+                            <p>Profesionalismo: {modal.estadisticas.profesionalismo}</p> 
                         </div>
                         </card>
                     )
