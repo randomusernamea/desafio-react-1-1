@@ -2,6 +2,7 @@
  
  let deportistas = [
     { 
+      class:1,
       image: "/images/1.jpg",
       nombre: "Pablo Heredia",
       especialidad: "Culturismo",
@@ -23,6 +24,7 @@
       },
     },
     {
+      class: 2,
       image: "/images/2.png",
       nombre: "Luis M. Suarez",
       especialidad: "Fútbol",
@@ -43,7 +45,8 @@
         profesionalismo: 40,
       },
     },
-    {
+    { 
+      class: 3,
       image: "/images/3.png",
       nombre: "Soy Dalto",
       especialidad: "Programador",
@@ -65,6 +68,7 @@
       },
     },
     {
+      class: 4,
       image: "/images/4.png",
       nombre: "Tigresa Acuña",
       especialidad: "Boxo",
@@ -86,6 +90,7 @@
       },
     },
     {
+      class: 5,
       image: "/images/5.png",
       nombre: "Andres Vilaseca",
       especialidad: "Rugby",
@@ -107,6 +112,7 @@
       },
     },
     { 
+      class: 6,
       image: "/images/6.png",
       nombre: "Manuela Vilar",
       especialidad: "Hockey",

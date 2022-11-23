@@ -6,6 +6,8 @@ import './main.css'
 function MainComp() {
   const[modalcontent, setModalContent] = useState ([])
   const[modaltoggle, setModalToggle] = useState (false)
+//   const[search, setSearch] = useState ('')
+//   const[button, setButton] = useState ('')
 
   
   const changeContent = (deportista) => {
@@ -15,7 +17,12 @@ function MainComp() {
 
 
   return (
+
+    
     <div className='mainContainer'> 
+         {/* <label htmlFor="search"></label>
+        <input onChange={onChangeSearch} type="text" />
+        <button onClick={onChangeCard}>BUSCAR</button> */}
        <div className='contentContainer'>
         {deportistas.map((deportista) => {
                 return(
@@ -55,7 +62,7 @@ function MainComp() {
                             <p>{modal.descripcion}</p>
                         </div> 
                         <div className='estadisticas'>
-                            <p>{modal.estadisticas[0]}</p>
+                            {/* <p>{modal.estadisticas[0]}</p> */}
                             {/* <p>{modal.energia}</p>
                             <p>{modal.fuerza}</p>
                             <p>{modal.resistencia}</p>
