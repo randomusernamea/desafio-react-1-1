@@ -7,10 +7,7 @@ function MainComp() {
   const[modalcontent, setModalContent] = useState ([])
   const[modaltoggle, setModalToggle] = useState (false)
   
-    const changeToggle(){
 
-    }
-  
   const changeContent = (deportista) => {
      setModalContent([deportista]); 
      setModalToggle(!modaltoggle)
