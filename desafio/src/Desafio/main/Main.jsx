@@ -18,6 +18,7 @@ function MainComp() {
     setSearch(e.target.value);
   }
 
+ 
 
 
 
@@ -29,11 +30,12 @@ function MainComp() {
     const resultado = deportistas.filter((deportista)=>{
         return deportista.nombre.toLowerCase().includes(search.toLowerCase())
         })
-    
     setPersonas(resultado);
+}
+    
 
 
-    }   
+       
 
   const changeContent = (deportista) => {
      setModalContent([deportista]); 
@@ -45,15 +47,18 @@ function MainComp() {
 
 
 
-    
-    <div className='mainContainer'> 
+     <>
+    <div className='buscador'> 
          <label htmlFor="search"></label>
-        <input value = {search} onChange={onChangeSearch} type="text" />
-        <button   onClick={onChangeCard}>BUSCAR</button>
+        <input className='searching' value = {search} onChange={onChangeSearch} type="text" />
+        <button className='botonsito'  onClick={onChangeCard}>BUSCAR</button>
+    </div>    
+    <div className='mainContainer'> 
+         
        <div className='contentContainer'>
         {personas.map((deportista) => {
                 return(
-                    <div className="content_card visible">
+                    <div className="content_card visible"> 
                         <div className='nameImgEspecialidad'>
                         <h1>{deportista.nombre}</h1>
                         <img className='imgDeportistas' src={deportista.image} alt="imagen" />
@@ -132,9 +137,13 @@ function MainComp() {
 
 
     </div>
+  
+ 
+</>
+ )
+} 
     
-  )
-}
+
 
 export default MainComp
 
@@ -156,25 +165,3 @@ export default MainComp
 
 
 
-// const [buscar, setBuscar] = useState ('')
-
-    // const onChangeBuscar = (e) =>{
-    //     setBuscar(e.target.value)
-    // }
-
-    // const busqueda = (e) =>{
-    //     e.preventDefault()
-    // }
-
-
-
-
-    // {/* <contenedor>
-          //  <form onSubmit={busqueda}>
-              //  <label htmlFor="buscador"></label>
-               // <input type="text" onChange={onChangeBuscar} />
-               // <button onClick={onClickButton} ></button>
-
-
-         //   </form> 
-      //  </contenedor> */}

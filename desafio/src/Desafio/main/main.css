@@ -164,3 +164,30 @@
     height:15px;
     background-color:black;
 }
+.searching {
+    font-size: 1.5rem;
+    border: solid 1px rgb(170, 116, 221) ; 
+    background-color:rgb(228, 211, 244); ;
+    width: 350px;
+    height: 40px;
+}
+
+.buscador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+}
+
+.botonsito {
+    margin-left: 20px;
+    background-color: yelloy;
+    width: 170px;
+    border: solid rgb(119, 119, 26);
+    background-color: rgb(242, 242, 146);
+    border-radius: 16px;
+    height: 30px;
+
+    
+}
