@@ -107,19 +107,19 @@ function MainComp() {
                         <div className='estadisticas'>
                             <ul id="listaEstadisticas">
                                 <li className="listItemEstadisticas">Energia: {modal.estadisticas.energia}</li> 
-                                <div className="divStatBarra"></div>
+                                <div className="divStatBarra" style={{marginLeft:`${parseInt(modal.estadisticas.energia)*3.1+50}px`}}></div>
                                 <li className="listItemEstadisticas">Fuerza: {modal.estadisticas.fuerza}</li> 
-                                <div className="divStatBarra"></div>
+                                <div className="divStatBarra" style={{marginLeft:`${parseInt(modal.estadisticas.fuerza)*3.1+50}px`}}></div>
                                 <li className="listItemEstadisticas">Resistencia: {modal.estadisticas.resistencia}</li>
-                                <div className="divStatBarra"></div>
+                                <div className="divStatBarra" style={{marginLeft:`${parseInt(modal.estadisticas.resistencia)*3.1+50}px`}}></div>
                                 <li className="listItemEstadisticas">Agilidad: {modal.estadisticas.agilidad}</li>
-                                <div className="divStatBarra"></div>
+                                <div className="divStatBarra" style={{marginLeft:`${parseInt(modal.estadisticas.agilidad)*3.1+50}px`}}></div>
                                 <li className="listItemEstadisticas">Aguante: {modal.estadisticas.aguante}</li>
-                                <div className="divStatBarra"></div>
+                                <div className="divStatBarra" style={{marginLeft:`${parseInt(modal.estadisticas.aguante)*3.1+50}px`}}></div>
                                 <li className="listItemEstadisticas">Dedicacion: {modal.estadisticas.dedicacion}</li>
-                                <div className="divStatBarra"></div>
+                                <div className="divStatBarra" style={{marginLeft:`${parseInt(modal.estadisticas.dedicacion)*3.1+50}px`}}></div>
                                 <li className="listItemEstadisticas">Profesionalismo: {modal.estadisticas.profesionalismo}</li>
-                                <div className="divStatBarra"></div>
+                                <div className="divStatBarra" style={{marginLeft:`${parseInt(modal.estadisticas.profesionalismo)*3.1+50}px`}}></div>
                             </ul>
                         </div>
                         </card>
