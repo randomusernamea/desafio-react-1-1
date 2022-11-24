@@ -77,29 +77,45 @@ function MainComp() {
                     
                     return(
                         <card className="popUpCard">
-                         <div className='presentacion'>   
-                        <p>{modal.nombre}</p>
-                        <p>Edad: {modal.edad}</p>
-                        <p>Altura: {modal.altura}</p>
-                        <p>Peso: {modal.peso}</p>
-                        <p>Nacionalidad: {modal.nacionalidad}</p>
-                        <p>Record personal: {modal.record}</p>
-                        <h5> Descripción  </h5>
-                            <p>{modal.descripcion}</p>
+                         <div className='presentacion'>  
+                         <img id='imgDeportistasPopUp' src={modal.image} alt="imagen" /> 
+                            <div id="rest">
+                            
+                                <p id="popUpNombre">{modal.nombre}</p>
+                                <ul>
+                                    <li className="popUpStat">Edad: {modal.edad}</li>
+                                    <li className="popUpStat">Altura: {modal.altura}</li>
+                                    <li className="popUpStat">Peso: {modal.peso}</li>
+                                    <li className="popUpStat">Nacionalidad: {modal.nacionalidad}</li>
+                                    <li className="popUpStat">Record personal: {modal.record}</li>
+                                </ul>
+                            </div>
+                            <div id="divDesc">
+                                <h5> Descripción  </h5>
+                                <p>{modal.descripcion}</p>
+                            </div>
                         </div>
                         {/* <div className='descripcion'> */}
                             {/* <h5> Descripción  </h5>
                             <p>{modal.descripcion}</p> */}
                         {/* </div>  */}
                         <div className='estadisticas'>
-                            <p>Energia: {modal.estadisticas.energia}</p> <br />
-
-                            <p>Fuerza: {modal.estadisticas.fuerza}</p> <br />
-                            <p>Resistencia: {modal.estadisticas.resistencia}</p><br />
-                            <p>Agilidad: {modal.estadisticas.agilidad}</p><br />
-                            <p>Aguante: {modal.estadisticas.aguante}</p><br />
-                            <p>Dedicacion: {modal.estadisticas.dedicacion}</p><br />
-                            <p>Profesionalismo: {modal.estadisticas.profesionalismo}</p> 
+                            <ul id="listaEstadisticas">
+                                <li className="listItemEstadisticas">Energia: {modal.estadisticas.energia}</li> 
+                                <div className="divStatBarra"></div>
+                                <li className="listItemEstadisticas">Fuerza: {modal.estadisticas.fuerza}</li> 
+                                <div className="divStatBarra"></div>
+                                <li className="listItemEstadisticas">Resistencia: {modal.estadisticas.resistencia}</li>
+                                <div className="divStatBarra"></div>
+                                <li className="listItemEstadisticas">Agilidad: {modal.estadisticas.agilidad}</li>
+                                <div className="divStatBarra"></div>
+                                <li className="listItemEstadisticas">Aguante: {modal.estadisticas.aguante}</li>
+                                <div className="divStatBarra"></div>
+                                <li className="listItemEstadisticas">Dedicacion: {modal.estadisticas.dedicacion}</li>
+                                <div className="divStatBarra"></div>
+                                <li className="listItemEstadisticas">Profesionalismo: {modal.estadisticas.profesionalismo}</li>
+                                <div className="divStatBarra"></div>
+                            </ul>
                         </div>
                         </card>
                     )
