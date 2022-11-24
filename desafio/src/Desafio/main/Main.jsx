@@ -6,8 +6,10 @@ import './main.css'
 function MainComp() {
   const[modalcontent, setModalContent] = useState ([])
   const[modaltoggle, setModalToggle] = useState (false)
+  const[personas, setPersonas] = useState(deportistas)
   const[search, setSearch] = useState ('')
   const[button, setButton] = useState ('')
+
 
 
 
@@ -24,36 +26,17 @@ function MainComp() {
 
 
   const onChangeCard = () => {
-    let resultado = deportistas.filter.;
-
-
-
-
-
-//   cards.forEach (showOrHide(element, texto)) 
-
-
-
-
-
+    
+    const resultado = deportistas.filter((deportista)=>{
+        return deportista.nombre.toLowerCase().includes(search.toLowerCase())
+        })
+    setPersonas(resultado);
 }
-
-// const showOrHide (card, text) {
-    //     if (texto === card.name) {
-        // card.class = show 
-//     } else {
-    // card.class = hidden
-    //
-// }
+    
 
 
-//  let  = deportistas.filter.includes((value) => {
-//     value
-//   })
+       
 
-  search = resultado
-
-  
   const changeContent = (deportista) => {
      setModalContent([deportista]); 
      setModalToggle(!modaltoggle)
@@ -62,14 +45,18 @@ function MainComp() {
 
   return (
 
-    <>
-     <label htmlFor="search"></label>
-        <input value = {search} onChange={onChangeSearch} type="text" />
-        <button   onClick={onChangeCard}>BUSCAR</button>
+
+
+     <>
+    <div className='buscador'> 
+         <label htmlFor="search"></label>
+        <input className='searching' value = {search} onChange={onChangeSearch} type="text" />
+        <button className='botonsito'  onClick={onChangeCard}>BUSCAR</button>
+    </div>    
     <div className='mainContainer'> 
          
        <div className='contentContainer'>
-        {deportistas.map((deportista) => {
+        {personas.map((deportista) => {
                 return(
                     <div className="content_card visible"> 
                         <div className='nameImgEspecialidad'>
@@ -92,6 +79,7 @@ function MainComp() {
             </div>
             <div className="popUpContent">
                 {modalcontent.map((modal)=>{
+                    
                     return(
                         <card className="popUpCard"> 
                          <div className='presentacion'>
@@ -133,10 +121,13 @@ function MainComp() {
 
 
     </div>
-    </>
+  
+ 
+</>
+ )
+} 
     
-  )
-}
+
 
 export default MainComp
 
@@ -158,25 +149,3 @@ export default MainComp
 
 
 
-// const [buscar, setBuscar] = useState ('')
-
-    // const onChangeBuscar = (e) =>{
-    //     setBuscar(e.target.value)
-    // }
-
-    // const busqueda = (e) =>{
-    //     e.preventDefault()
-    // }
-
-
-
-
-    // {/* <contenedor>
-          //  <form onSubmit={busqueda}>
-              //  <label htmlFor="buscador"></label>
-               // <input type="text" onChange={onChangeBuscar} />
-               // <button onClick={onClickButton} ></button>
-
-
-         //   </form> 
-      //  </contenedor> */}
