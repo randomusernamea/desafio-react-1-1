@@ -6,8 +6,35 @@ import './main.css'
 function MainComp() {
   const[modalcontent, setModalContent] = useState ([])
   const[modaltoggle, setModalToggle] = useState (false)
+  const[personas, setPersonas] = useState(deportistas)
+  const[search, setSearch] = useState ('')
+  const[button, setButton] = useState ('')
 
-  
+
+
+
+
+  const onChangeSearch = (e) => {
+    setSearch(e.target.value);
+  }
+
+
+
+
+
+
+
+  const onChangeCard = () => {
+    
+    const resultado = deportistas.filter((deportista)=>{
+        return deportista.nombre.toLowerCase().includes(search.toLowerCase())
+        })
+    
+    setPersonas(resultado);
+
+
+    }   
+
   const changeContent = (deportista) => {
      setModalContent([deportista]); 
      setModalToggle(!modaltoggle)
@@ -15,14 +42,21 @@ function MainComp() {
 
 
   return (
+
+
+
+    
     <div className='mainContainer'> 
+         <label htmlFor="search"></label>
+        <input value = {search} onChange={onChangeSearch} type="text" />
+        <button   onClick={onChangeCard}>BUSCAR</button>
        <div className='contentContainer'>
-        {deportistas.map((deportista) => {
+        {personas.map((deportista) => {
                 return(
-                    <div className="content_card">
+                    <div className="content_card visible">
                         <div className='nameImgEspecialidad'>
                         <h1>{deportista.nombre}</h1>
-                        <img src={`./images${deportista.imgFile}`} alt="imagen" />
+                        <img className='imgDeportistas' src={deportista.image} alt="imagen" />
                         <h1>{deportista.especialidad}</h1>
                         </div>
                         <div className='contenedorButton'>
@@ -40,15 +74,34 @@ function MainComp() {
             </div>
             <div className="popUpContent">
                 {modalcontent.map((modal)=>{
+                    
                     return(
-                        <div className="popUpCard">
+                        <card className="popUpCard">
+                         <div className='presentacion'>   
                         <p>{modal.nombre}</p>
                         <p>Edad: {modal.edad}</p>
                         <p>Altura: {modal.altura}</p>
                         <p>Peso: {modal.peso}</p>
                         <p>Nacionalidad: {modal.nacionalidad}</p>
                         <p>Record personal: {modal.record}</p>
+                        <h5> Descripción  </h5>
+                            <p>{modal.descripcion}</p>
                         </div>
+                        {/* <div className='descripcion'> */}
+                            {/* <h5> Descripción  </h5>
+                            <p>{modal.descripcion}</p> */}
+                        {/* </div>  */}
+                        <div className='estadisticas'>
+                            <p>Energia: {modal.estadisticas.energia}</p> <br />
+
+                            <p>Fuerza: {modal.estadisticas.fuerza}</p> <br />
+                            <p>Resistencia: {modal.estadisticas.resistencia}</p><br />
+                            <p>Agilidad: {modal.estadisticas.agilidad}</p><br />
+                            <p>Aguante: {modal.estadisticas.aguante}</p><br />
+                            <p>Dedicacion: {modal.estadisticas.dedicacion}</p><br />
+                            <p>Profesionalismo: {modal.estadisticas.profesionalismo}</p> 
+                        </div>
+                        </card>
                     )
                 })}
             </div>

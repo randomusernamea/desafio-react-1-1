@@ -52,6 +52,10 @@
     margin: auto;
 }
 
+.popUpCard {
+    display: flex;
+}
+
 .contenedorButton {
     height: 15%;
     width: 90%;
@@ -74,3 +78,36 @@
     border-radius: 20px;
 }
 
+.imgDeportistas {
+    width: 50% ;
+    height: 70%;
+}
+
+.presentacion {
+    width: 50%;
+    height: 100%;
+}
+
+.descripcion {
+    width: 50%;
+    height: 50%;
+}
+
+.estadisticas {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    
+    font-size: 1rem;
+    width: 50%;
+    height: 100%;
+}
+
+.show {
+   display: block;
+}
+.hidden {
+    display: none;
+
+}
