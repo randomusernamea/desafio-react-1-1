@@ -1,5 +1,6 @@
 import React from 'react'
-import { useState, useEffect } from 'react'
+import { useState, } from 'react'
+import { Link } from 'react-router-dom'
 import deportistas from './deportistas'
 import './main.css'
 
@@ -65,14 +66,14 @@ function MainComp() {
                         <h1>{deportista.especialidad}</h1>
                         </div>
                         <div className='contenedorButton'>
-                        <button className='buttonVerMas' onClick={()=> changeContent(deportista) }>VER MAS</button>
+                        <Link to = {`deportistas/${deportista.id}`}><button className='buttonVerMas' onClick={()=> changeContent(deportista) }>VER MAS</button></Link>
                         </div>
                     </div>
                 );
             })
         }
        </div>
-        {modaltoggle && ( <div className="popUpContainer">
+        {/* {modaltoggle && ( <div className="popUpContainer">
             <div className="popUpBody">
             <div className="popUpHeader">
                 <button onClick={changeContent}>x</button>
@@ -100,10 +101,7 @@ function MainComp() {
                                 <p>{modal.descripcion}</p>
                             </div>
                         </div>
-                        {/* <div className='descripcion'> */}
-                            {/* <h5> Descripción  </h5>
-                            <p>{modal.descripcion}</p> */}
-                        {/* </div>  */}
+                       
                         <div className='estadisticas'>
                             <ul id="listaEstadisticas">
                                 <li className="listItemEstadisticas">Energia: {modal.estadisticas.energia}</li> 
@@ -130,7 +128,7 @@ function MainComp() {
           
 
 
-        </div>)}
+        </div>)} */}
 
 
 

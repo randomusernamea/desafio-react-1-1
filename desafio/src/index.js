@@ -4,11 +4,16 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {createBrowserRouter, RouterProvider, Route} from "react-router-dom";
+import Deportista from './Desafio/deportista/deportista';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App/>,
+  },
+  {
+    path: "deportistas/:idDeportista",
+    element: <Deportista />
   }
 ])
 
